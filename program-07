@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class integer
+{
+private:
+    int a;
+public:
+    integer(int x=0)
+    {
+        a=x;
+    }
+    void operator !()
+    {
+        a=!a;
+        cout<<"value of !a is : "<<a<<endl;
+    }
+    void showvalue()
+    {
+        cout<<"value of a is  : ";
+        cout<<a<<endl;
+    }
+};
+int main()
+{
+    integer i(5);
+    i.showvalue();
+    !i;
+return 0;
+}
