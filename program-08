@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+class coordinate
+{
+private:
+    int a,b,c;
+public:
+    coordinate(int x=0,int y=0,int z=0)
+    {
+        a=x;
+        b=y;
+        c=z;
+    }
+    coordinate operator,(const coordinate &c2)
+    {
+        coordinate temp;
+        temp.a=c2.a;
+        temp.b=c2.b;
+        temp.c=c2.c;
+        cout<<"x = "<<temp.a<<", y = "<<temp.b<<", z = "<<temp.c<<"\n\n";
+        return temp;
+    }
+    void showcoordinates()
+    {
+        cout<<"x = "<<a<<", y = "<<b<<", z = "<<c<<"\n\n";
+    }
+};
+int main()
+{
+    coordinate c1(1,2,3),c2(2,3,4),c3;
+    c1.showcoordinates();
+    c2.showcoordinates();
+    c3=(c1,c2);
+return 0;
+}
