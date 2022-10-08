@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class complex
+{
+private:
+    int real,img;
+public:
+    complex(int real=0,int img=0){}
+    void setdata()
+    {
+        cout<<"Enter the real part : ";
+        cin>>real;
+        cout<<"Enter the imag part : ";
+        cin>>img;
+        cout<<"\n";
+    }
+    void showdata()
+    {
+        cout<<"Entered complex number is : ";
+        cout<<real<<" +i"<<img<<"\n";
+    }
+};
+int main()
+{
+    complex c1,c2;
+    c1.setdata();
+    c1.showdata();
+return 0;
+}
