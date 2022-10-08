@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+class marks
+{
+private:
+   int mark;
+public:
+    marks(int a)
+    {
+        this->mark=a;
+    }
+		void printmarks()
+		{
+		    cout<<"marks = "<<mark<<endl;
+        }
+};
+int main()
+{
+	marks *m = new marks(88);
+	cout<<"Using * and . Operators\n";
+	(*m).printmarks();
+	cout<<"Using Arrow Operator (->)\n";
+	m->printmarks();
+return 0;
+}
